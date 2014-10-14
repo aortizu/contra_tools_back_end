@@ -1,11 +1,11 @@
 /**
- * Herramienta.js
+ * Empleado.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/#!documentation/models
  */
 module.exports = {
-    tableName: 'herramienta',
+    tableName: 'empleado',
     adapter: 'someMysqlServer',
     migrate: 'safe',
     attributes: {
@@ -13,13 +13,16 @@ module.exports = {
             type: 'string',
             required: true
         },
-        serial: {
+        cargo: {
             type: 'string'
         },
-        descripcion: {
+        documento: {
             type: 'string'
         },
-        comentario: {
+        vinculacion: {
+            type: 'string'
+        },
+        comentarios: {
             type: 'string'
         }
     }
