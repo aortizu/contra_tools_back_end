@@ -21,6 +21,7 @@ module.exports = {
         },
         comentario: {
             type: 'string'
+
         }
     }
 };
