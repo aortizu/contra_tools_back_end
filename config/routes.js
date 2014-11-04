@@ -34,7 +34,9 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
+  'GET /herramienta/eliminar/:id': 'HerramientaController.eliminar',
+  'POST /empleado_herramienta/retirar': 'Empleado_herramientaController.retirar'
 
   /***************************************************************************
   *                                                                          *
