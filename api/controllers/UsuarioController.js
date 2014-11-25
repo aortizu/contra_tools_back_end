@@ -32,7 +32,7 @@ module.exports = {
         res.json({ error: 'User not found' }, 404);
       }
     });
-  }
+  },
   
 
 };

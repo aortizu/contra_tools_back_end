@@ -28,6 +28,28 @@
       res.json("succes");
        
     });
+  },
+   
+   
+  qr:function(req, res){
+      var qr = require('qr-image');  
+      var fs = require('fs');
+
+      var code = qr.image('http://blog.nodejitsu.com', { type: 'svg' });  
+      var output = fs.createWriteStream('nodejitsu.svg')
+
+      code.pipe(output); 
+    
+    req.on('end', function () {
+    res.writeHead(200, {"content-type":"text/html"});
+    res.end('<form method="POST"><input name="test" /><input type="submit"></form>');
+  });
+    
+     output.on('error', function (err) {
+    console.log(err);
+  });
   }
+   
+   
 };
 
